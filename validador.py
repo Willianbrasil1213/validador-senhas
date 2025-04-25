@@ -1,11 +1,11 @@
 import re
 
 def classifica_senha(senha):
-    # Regex para as classificações de acordo com os novos critérios
+
     fraca = r"^[a-zA-Z]{1,5}$"
     moderada = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,7}$"
     forte = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,9}$"
-    muito_forte = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#\$%\^&\*])[a-zA-Z\d!@#\$%\^&\*]{10}$"  # exatamente 10 caracteres
+    muito_forte = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#\$%\^&\*])[a-zA-Z\d!@#\$%\^&\*]{10}$"
 
     if re.fullmatch(fraca, senha):
         return "A senha informada é classificada como: Fraca"
